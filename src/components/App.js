@@ -9,6 +9,7 @@ import Poll from './Poll';
 import Navbar from './Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from './Login';
+import NotFound from './NotFound';
 
 function App({dispatch, auth}) {
 
@@ -26,6 +27,7 @@ function App({dispatch, auth}) {
       <Route exact path="/leaderboard" element={<Leaderboard />} />
       <Route exact path="/add" element={<NewQ />} />
       <Route exact path="/questions/:question_id" element={<Poll />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
     </div>
   </Router>
