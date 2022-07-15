@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
@@ -35,4 +37,170 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.question-container{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  border-color: #aaaaaa;
+  padding: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 200px;
+}
+
+.question-author {
+  font-size: large;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.question-date {
+  font-size: small;
+  font-weight: 200;
+  color: #373737;
+}
+
+.question-button {
+  font-size: small;
+  color: #10743f;
+  background-color: white;
+  border-color: #10743f;
+  border: solid 1px;
+}
+
+.question-button:hover {
+  color: white;
+  background-color: #10743f;
+  border-color: #10743f;
+  border: solid 1px;
+  cursor: pointer;
+}
+
+.list-container{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  border-color: #aaaaaa;
+  margin: 5px;
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+.list-title{
+  font-size: larger;
+  font-weight: 800;
+  border-bottom: solid 1px;
+  border-color: #aaaaaa;
+}
+
+.list-questions{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  padding: 10px;
+}
+
+.home-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.leaderboard-container{
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px;
+  border-color: #aaaaaa;
+}
+
+.leaderboard-row{
+  display: flex;
+  border-color: #aaaaaa;
+  border-top: solid 1px;
+  border-right: solid 1px;
+}
+
+.leaderboard-c1{
+  padding: 5px;
+  width: 400px;
+  border-color: #aaaaaa;
+  border-left: solid 1px;
+}
+
+.leaderboard-c2{
+  padding: 5px;
+  width: 200px;
+  border-color: #aaaaaa;
+  border-left: solid 1px;
+}
+
+.leaderboard-c3{
+  padding: 5px;
+  width: 200px;
+  border-color: #aaaaaa;
+  border-left: solid 1px;
+}
+
+.option{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-right: 15px;
+  border: solid 1px #aaaaaa;
+  border-radius: 5%;
+}
+
+.option-container{
+  display: flex;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(84, 97, 102);
+  color: white;
+}
+
+.nav-links{
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.logout{
+  display: flex;
+}
+
+.logout-button:hover{
+  cursor: pointer;
+}
+
+.a{
+  color: white;
+  text-decoration: none;
+}
+
+.navbar{
+  margin-bottom: 10px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-text{
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 300px;
+
 }
