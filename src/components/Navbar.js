@@ -11,28 +11,29 @@ function Navbar({dispatch, auth}) {
         navigate('/login')
     }
 
-  return (auth &&
+  return (
     <nav className='navbar'>
     <ul className="nav-links">
       <Link to="/" className='a'>
-        <li>Home</li>
+        <li data-testid='home'>Home</li>
       </Link>
       <Link to="/leaderboard" className='a'>
-        <li>Leaderboard</li>
+        <li data-testid='leaderboard'>Leaderboard</li>
       </Link>
       <Link to="/add" className='a'>
-        <li>New</li>
+        <li data-testid='new'>New</li>
       </Link>
     </ul>
     <div className='logout'>
-        <img style={{
+        {auth && <><img 
+        style={{
             width: '50px',
             height: '50px',
             borderRadius: '50%',
             marginRight: '5px'
         }} src={auth.avatarURL} alt="" />
-        <p>{auth.name}</p>
-        <ul className="nav-links"><li className='logout-button' onClick={handleLogout}>Logout</li></ul>
+        <p>{auth.name}</p></>}
+        <ul className="nav-links"><li data-testid='logout' className='logout-button' onClick={handleLogout}>Logout</li></ul>
     </div>
 </nav>
   )

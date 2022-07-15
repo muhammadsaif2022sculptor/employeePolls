@@ -13,7 +13,7 @@ function Leaderboard({users, sorted, auth}) {
         <div className='leaderboard-container'>
             <div className='leaderboard-row'>
                 <div className='leaderboard-c1'>User</div>
-                <div className='leaderboard-c2'>Answered</div>
+                <div className='leaderboard-c2' data-testid='answered'>Answered</div>
                 <div className='leaderboard-c3'>Created</div>
             </div>
             {sorted.map(id => (

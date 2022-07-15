@@ -14,13 +14,14 @@ function Login({dispatch, auth, users}) {
 
 
     function handleLogin() {
-        user !== 'Select' && user !== 'Select User' && dispatch(setAuthUser(user))
+        dispatch(setAuthUser(user))
     }
 
   return (
     <div>
         <h1>Please Select user to login</h1>
         <select value={user} 
+        data-testid='dropdown'
         onChange={(e) => setUser(e.target.value)}
         >
             <option>
@@ -32,7 +33,7 @@ function Login({dispatch, auth, users}) {
                 </option>
             ))}
         </select>
-        <button style={{marginLeft:'10px'}} onClick={handleLogin}>Login</button>
+        {user !== 'Select' && user !== 'Select User' && <button data-testid='login' style={{marginLeft:'10px'}} onClick={handleLogin}>Login</button>}
     </div>
   )
 }

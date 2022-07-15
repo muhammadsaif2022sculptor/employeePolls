@@ -22,8 +22,7 @@ function Poll({dispatch, questions, users, auth}) {
         dispatch(handleSaveAnswer(info));
     }
 
-    // return (<div>{question_id}</div>)
-    if(!questions[question_id]) return (<h1>404 Page Not Found</h1>)
+    if(!questions[question_id]) return (<h1 data-testid='404'>404 Page Not Found</h1>)
     else return (users && <>
     <div>
         <h2>Poll by {questions[question_id].author}</h2>

@@ -10,7 +10,7 @@ import Navbar from './Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Login from './Login';
 
-function App({dispatch}) {
+function App({dispatch, auth}) {
 
   useEffect(()=>{
     dispatch(handleData())
@@ -18,7 +18,7 @@ function App({dispatch}) {
 
   return (<>
   <Router>
-  <Navbar />
+  {auth && <Navbar />}
   <div className="App">
     <Routes>
       <Route exact path="/" element={<Home />} />
@@ -33,8 +33,9 @@ function App({dispatch}) {
   );
 }
 
-const mapStateToProps = ({ questions }) => ({
+const mapStateToProps = ({ questions, userAuth }) => ({
   questions: questions,
+  auth: userAuth
 });
 
 
